@@ -1,0 +1,284 @@
+1. <!DOCTYPE html>
+<html>
+<body>
+ <script>
+ alert( "I’m JavaScript!");
+ </script>
+ Whats the error in this ?
+ <!-- alert( “I’m JavaScript!’); 
+</body>
+</html>
+
+Ans : wrong Double quotes at the end 
+
+----------------------------------------------------------------------
+
+2.
+<!DOCTYPE html>
+<html>
+<body>
+ <script src="script.js"></script>
+</body>
+</html>
+
+Ans : <script src="script.js"></script> ( Maybe this line should be at the bottom of the code ) thats it
+
+
+
+script.js:
+alert("I’m invoked!");
+
+----------------------------------------------------------------------
+
+3.
+script.js:
+
+alert("I'm JavaScript!");
+alert('Hello') // this line is not having semicolon
+alert(`World`)
+alert(3 + 1+ 2); // this is multiple line code and its working
+
+
+Ans :
+
+// alert messages will come one after the another.
+// I'm JavaScript
+// Hello
+// World
+// 6 
+
+
+-----------------------------------------------------------------------
+4.
+let admin=9, fname=10.5; 
+fname = "Guvi";
+lname = "geek"
+admin = fname+' '+lname;
+alert( admin ); // "Guvi geek"
+
+Ans :
+
+// previously fname+lname was coded need to give space in between them.
+//  => fname+' '+lname;
+
+-----------------------------------------------------------------------
+5.
+let fname=10.5; 
+fname = "Guvi";
+lname = "geek"
+// let name = fname+lname;
+// alert( 'hello ${name}' );
+let name = fname+' '+lname;
+alert( `hello ${name}` );
+
+Ans :
+
+//we need use backtick symbol (`) instead of single quote in the alert and 
+// a space between fname+' '+lname
+
+---------------------------------------------------------------------
+6.
+let a = prompt("First number?");
+let b = prompt("Second number?");
+alert(a + b);
+
+Ans :
+
+let a = parseInt(prompt("First number?"));
+let b = parseInt(prompt("Second number?"));
+alert(a + b);
+
+
+Ans :
+
+// we need to give a parseInt() before prompt.
+// so that the computer can take two numbers as input which are intially //string
+
+------------------------------------------------------------------------
+
+7.
+
+//var a = "2" > "12";
+var a = parseInt("2") > parseInt("12");
+//Don't touch below this
+if (a) {
+  console.log("Code is Blasted")
+}
+else
+{
+  console.log("Diffused") 
+}
+
+Ans :
+
+// we are comparing two charecters in the first statement.
+// so a becomes true as '2' is greater than '1'. the "code is Blasted".
+// if we convert the given input to a int using parseInt(), 'a' will be false 
+// as 2 < 12. "Diffused" will be executed.
+
+
+-------------------------------------------------------------------------
+8.
+let a = prompt("Enter a number?");
+//Don't modify any code below this
+if (a) {
+ console.log( 'OMG it works for any number inc 0' );
+}
+else
+{
+ console.log( "Success" );
+}
+
+Ans :
+
+//if we want to get success in code enter anything expect numbers, as anything 
+//we enter either positive, negitive or decimal if condition executes. 
+
+--------------------------------------------------------------
+
+9.
+
+let value = parseInt(prompt('How many runs you scored in this ball'));
+if (value === 4) {
+      console.log("You hit a Four");
+} else if (value === 6) {
+      console.log("You hit a Six");
+} else {
+      console.log("I couldn't figure out");
+}
+
+Ans :
+
+//adding parseInt() before prompt so that the scores correctly
+
+--------------------------------------------------------------------
+
+10.
+
+let login = 'Employee';
+//let message = (login == 'Employee') ? :  (login == 'Director') ? 'Greetings' :  (login == '') ? 'No login' :  '';
+let message = (login == 'Employee') ? 'Welcome to Employee':  (login == 'Director') ? 'Greetings' :  (login == '') ? 'No login' :  '';
+
+console.log(message);
+
+Ans :
+
+// we need to add 'Welcome to Employee' between ? and : inorder to Execute the code
+
+----------------------------------------------------------------------
+11.
+
+// You cant change the value of the msg
+let message;
+if (null || 2 || undefined )
+{
+  message = "welcome boss";
+}
+else
+{
+ let message = "Go away";
+}
+console.log(message);
+
+Ans :
+
+// remove let in if condition. as let creates a new message
+
+------------------------------------------------------------------------
+12.
+
+let i = 3;
+while (i) {
+  console.log( i-- );
+}
+
+Ans :
+
+// post decrementing the ith value
+
+--------------------------------------------------------------------------------
+13.
+// Change the code to print 1 to 10 in 4 lines
+
+Ans :
+
+for(var x = 1;x<11;x++){
+  console.log(x)
+}
+
+----------------------------------------------------------------------------------
+14.
+for (let num = 2; num <= 20; num += 2) {
+  console.log(num)
+}
+
+Ans :
+
+// as the number starts with 2 increment the number by 2
+// so that even numbers can occur till the higher limit
+
+-------------------------------------------------------------------------------
+15.
+
+let gifts = ["teddy bear", "drone", "doll"];
+for (let i = 0; i < 3; i++) {
+  console.log(`Wrapped ${gifts[i]} and added a bow!`);
+}
+
+Ans :
+
+// console.log('Wrapped ${'gifts[i]'} and added a bow!');
+// Remove the tick mark at the start and at the end remove single quotes near gifts[i]
+
+---------------------------------------------------------------------------------
+16.
+let countdown = 100;
+while (countdown > 0) {
+
+  if(countdown == 0)
+  {
+   console.log("bomb triggered");
+  }
+  Ans : countdown--;
+}
+console.log("Bomb disarmed")
+
+// decrement the countdown below the if condition where countdown == 0
+
+------------------------------------------------------------------------------
+
+17.
+
+var lemein = "0";
+var lemeout = 0;
+var msg = "";
+if (lemein) {
+ msg += "hi";
+ }
+if (lemeout) {
+ msg += "Hello";
+}
+console.log(msg);
+
+Ans :
+
+// "hi" is printed because lemein == "0" is treated as 
+// a true statement where as lemeout is treated as a False statement.
+
+-------------------------------------------------------------------------------
+18.
+var lemein ="0";
+var lemeout = 0;
+var msg = "";
+if (lemein) {
+ msg += "hi";
+ }
+if (lemeout) {
+ msg += "Hello";
+}
+console.log(msg);
+
+Ans :
+
+// "hi" is printed because lemein == "0" is treated as 
+// a true statement where as lemeout is treated as a False statement.
